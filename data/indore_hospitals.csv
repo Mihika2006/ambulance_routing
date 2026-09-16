@@ -1,0 +1,384 @@
+Hospital_ID,Name,Latitude,Longitude,Emergency_Type,Bed_Capacity
+HOSP-100,Greater Kailash Hospital,22.7250815,75.8904652,General / Trauma,50
+HOSP-101,Shubham Hospital,22.6910407,75.8263785,General / Trauma,50
+HOSP-102,Curewell hospital janjeerwala square,22.726664,75.8819643,General / Trauma,50
+HOSP-103,kjd,22.8197524,75.9431528,General / Trauma,50
+HOSP-104,Yoga Amrutam,22.7579241,75.9020955,General / Trauma,50
+HOSP-105,Care Ayurveda Clinic,22.7537292,75.8877182,General / Trauma,50
+HOSP-106,Ayurveda Amratam,22.7571686,75.9026775,General / Trauma,50
+HOSP-107,AKAMI Ayurveda,22.7575457,75.9025743,General / Trauma,50
+HOSP-108,Ashadeep Hospital,22.7637651,75.8914441,General / Trauma,50
+HOSP-109,Banadas Homeopathic Clinic,22.7533421,75.8878805,General / Trauma,50
+HOSP-110,Arogyam Homeopathic Clinic- Dr. Rajesh Bhordiya & Dr. Tanuja Bhordiya,22.7537168,75.8858655,General / Trauma,50
+HOSP-111,Rhythmic Power Yoga,22.7558514,75.88723,General / Trauma,50
+HOSP-112,Kanak Hospital,22.7650473,75.8871227,General / Trauma,50
+HOSP-113,Care Ayurveda Clinic,22.7537243,75.8877236,General / Trauma,50
+HOSP-114,Mother Care Nursing Home,22.7585123,75.8859229,General / Trauma,50
+HOSP-115,Indore Institute Of Medical Scinces,22.7611952,75.8961812,General / Trauma,50
+HOSP-116,Aashirwad Homeo Clinic,22.7526862,75.8895031,General / Trauma,50
+HOSP-117,Aarogya Jivan Homeopathy Clinic,22.7525643,75.8905925,General / Trauma,50
+HOSP-118,Bhandari Hospital and Research Center,22.7527999,75.8889798,General / Trauma,50
+HOSP-119,Aura Health Care,22.7586481,75.9075395,General / Trauma,50
+HOSP-120,The Homeopathy,22.7567963,75.9095487,General / Trauma,50
+HOSP-121,Jyoti Hospital,22.7529278,75.888716,General / Trauma,50
+HOSP-122,Sankalp Eye Hospital,22.7436804,75.8982834,General / Trauma,50
+HOSP-123,E.S.I.C. Hospital,22.7484062,75.8784109,General / Trauma,50
+HOSP-124,Al Jufin Unani,22.7304692,75.894641,General / Trauma,50
+HOSP-125,YOGA,22.7337715,75.8924636,General / Trauma,50
+HOSP-126,Pratyush Homeo Pharmacy & Clinic,22.7309528,75.899705,General / Trauma,50
+HOSP-127,Samarpit Hospital,22.7280707,75.8941448,General / Trauma,50
+HOSP-128,Ayurvedic Medicines,22.7279099,75.8942038,General / Trauma,50
+HOSP-129,Rx Aushadhi,22.7281561,75.8942775,General / Trauma,50
+HOSP-130,Narmade Ayruvedam Panchkaram Kendra,22.7294524,75.8966553,General / Trauma,50
+HOSP-131,The Biopsy,22.729492,75.896725,General / Trauma,50
+HOSP-132,Active Life,22.7315831,75.9012801,General / Trauma,50
+HOSP-133,Dr. Jasmeet Kaur Chhabra,22.7293071,75.892567,General / Trauma,50
+HOSP-134,Guru Tech Bahaddur Hospital,22.7404769,75.8813412,General / Trauma,50
+HOSP-135,Dr. Prachi thirwani,22.7284468,75.894814,General / Trauma,50
+HOSP-136,Hamidiya Shifakhana,22.7281957,75.8949923,General / Trauma,50
+HOSP-137,Rinku Sharma Thalassemia Charitable Hospital,22.7447762,75.8764395,General / Trauma,50
+HOSP-138,Vidhya Nursing Home,22.7427812,75.8938873,General / Trauma,50
+HOSP-139,Universal Hospital and Care Centre,22.7611505,75.9054808,General / Trauma,50
+HOSP-140,Homoeopathic and Biochemical Dawaiya,22.7374578,75.8852975,General / Trauma,50
+HOSP-141,Tomar Homeo Clinic,22.7376755,75.8854262,General / Trauma,50
+HOSP-142,Yoganandam,22.7342072,75.8895233,General / Trauma,50
+HOSP-143,Dr. Neha Goyal,22.7319834,75.8732514,General / Trauma,50
+HOSP-144,Shree Ji hospital,22.7319719,75.8739883,General / Trauma,50
+HOSP-145,Dr Vijay Khetan,22.7332659,75.8757244,General / Trauma,50
+HOSP-146,Samar Maternity Home,22.7354524,75.90237,General / Trauma,50
+HOSP-147,Dayavati Hospital,22.7370978,75.9008727,General / Trauma,50
+HOSP-148,Mangilal Churiya Hospital,22.7325578,75.8844699,General / Trauma,50
+HOSP-149,Retina Speciality Hospital,22.7478985,75.8965836,General / Trauma,50
+HOSP-150,Medanta,22.7487476,75.8959419,General / Trauma,50
+HOSP-151,Patanjali Home Care,22.7479164,75.899411,General / Trauma,50
+HOSP-152,Indore Medical Hall,22.7395159,75.8805406,General / Trauma,50
+HOSP-153,Bhandari Hospital,22.7479739,75.8720419,General / Trauma,50
+HOSP-154,Verma Nursing Home,22.7450659,75.871543,General / Trauma,50
+HOSP-155,Dayanand Hospital,22.741798,75.8711712,General / Trauma,50
+HOSP-156,City Hospital and Research Centre,22.7338992,75.8738659,General / Trauma,50
+HOSP-157,Greater Gate Whale Nursing Home,22.7366612,75.8845894,General / Trauma,50
+HOSP-158,Triveni Hospital,22.7367985,75.8858192,General / Trauma,50
+HOSP-159,Ankur Hospital Pvt Ltd.,22.731815,75.8742776,General / Trauma,50
+HOSP-160,Laxmi Memorial Hospital,22.7310171,75.8830511,General / Trauma,50
+HOSP-161,The Recovery Hospital,22.7298433,75.8820641,General / Trauma,50
+HOSP-162,Curewell Hospital,22.7266717,75.881997,General / Trauma,50
+HOSP-163,Shobha's Yoga Studio,22.7314167,75.8752406,General / Trauma,50
+HOSP-164,Charak Hospital Pvt Ltd,22.7292322,75.8728829,General / Trauma,50
+HOSP-165,Rohit Eye Hospital And Child Care Centre,22.7345943,75.8891518,General / Trauma,50
+HOSP-166,Sohanlal Holistic Centre,22.7321143,75.8776653,General / Trauma,50
+HOSP-167,Shalby Hospitals,22.7290566,75.8792853,General / Trauma,50
+HOSP-168,Safe Care Homoeopathy Clinic,22.7311941,75.8745432,General / Trauma,50
+HOSP-169,Child Care Hospital,22.7168472,75.8939122,General / Trauma,50
+HOSP-170,Crystal Lithotripsy and Urology Centre,22.7256283,75.8885149,General / Trauma,50
+HOSP-171,Mayank Hospital,22.7225414,75.8884136,General / Trauma,50
+HOSP-172,New Shri Ji Homeo Link,22.7190329,75.8965098,General / Trauma,50
+HOSP-173,Dr. Salil Bhargava,22.7083731,75.8892256,General / Trauma,50
+HOSP-174,Shreyance Clinic,22.7129529,75.884407,General / Trauma,50
+HOSP-175,Shri Vaishnav Hospital,22.7187494,75.8974379,General / Trauma,50
+HOSP-176,Medicare Hospital,22.7223831,75.8908209,General / Trauma,50
+HOSP-177,Patanjali Mega Store,22.7262351,75.8810945,General / Trauma,50
+HOSP-178,Shree Chandra Yoga Kendra,22.7177577,75.8882915,General / Trauma,50
+HOSP-179,Vishesh Hospital,22.7167563,75.8844184,General / Trauma,50
+HOSP-180,B M Mittal Hospital and Research Centre,22.7184481,75.8874929,General / Trauma,50
+HOSP-181,Geeta Bhawan Hospital,22.7181283,75.8874493,General / Trauma,50
+HOSP-182,Suyash Hospital,22.7137979,75.8839269,General / Trauma,50
+HOSP-183,Government Autonomous College Of Dentistry And Hospital,22.7116515,75.8814606,General / Trauma,50
+HOSP-184,Dolphin Hospital,22.7239229,75.8836201,General / Trauma,50
+HOSP-185,Nitya Homeopathic,22.7265264,75.8795755,General / Trauma,50
+HOSP-186,श्री अनंन्तनाथ चिकित्सालय,22.7076259,75.8771583,General / Trauma,50
+HOSP-187,Christan Hospital,22.7115074,75.8717128,General / Trauma,50
+HOSP-188,Dr. Hardiya Advanced Eye Surgery And Research Centre,22.7106686,75.8708169,General / Trauma,50
+HOSP-189,Gokuldas Hospital,22.7163846,75.8760777,General / Trauma,50
+HOSP-190,M Y Hospital Respiratory and Bone Section,22.7134599,75.8810934,General / Trauma,50
+HOSP-191,M Y HOSPITAL,22.7135344,75.8795567,General / Trauma,50
+HOSP-192,M Y Cancer Hospital,22.7138334,75.8787151,General / Trauma,50
+HOSP-193,Greater Kailash Hospital,22.7251265,75.8894677,General / Trauma,50
+HOSP-194,Bhagwati Maternity And Nursing Home,22.7195099,75.896241,General / Trauma,50
+HOSP-195,Eurekaa Hospital,22.7233461,75.8890892,General / Trauma,50
+HOSP-196,P. C. Sethi hospital,22.7086107,75.8786416,General / Trauma,50
+HOSP-197,Dr. Kailash Chandra clinic,22.7092948,75.8758306,General / Trauma,50
+HOSP-198,Shakuntala Devi Hospital And Research Centre,22.7175671,75.9057116,General / Trauma,50
+HOSP-199,Physiocare,22.7102059,75.8780291,General / Trauma,50
+HOSP-200,Noble Hospital,22.7191416,75.8778054,General / Trauma,50
+HOSP-201,M Y Accident and Emergency Centre,22.7137146,75.8790282,General / Trauma,50
+HOSP-202,Late Shri Rajendra Darkar OPD,22.7134571,75.8785115,General / Trauma,50
+HOSP-203,Eureka Hospital,22.7228705,75.8962919,General / Trauma,50
+HOSP-204,Disha Fertility and Surgical Centre,22.7254304,75.8953672,General / Trauma,50
+HOSP-205,आनंद हॉस्पिटल एंड रिसर्च सेंटर,22.7031498,75.8615593,General / Trauma,50
+HOSP-206,Chirayu Hospital,22.7199276,75.8404469,General / Trauma,50
+HOSP-207,Bansal Hospital,22.7132681,75.8438472,General / Trauma,50
+HOSP-208,Multani Ayurvedic Clinic,22.7159235,75.8557001,General / Trauma,50
+HOSP-209,Tanish Hospital,22.7162654,75.854975,General / Trauma,50
+HOSP-210,Holi Homeo Clinic,22.7191479,75.8563593,General / Trauma,50
+HOSP-211,"District Hospital,Indore",22.7088254,75.8308062,General / Trauma,50
+HOSP-212,Ramkrishna Hospital,22.7099932,75.8315987,General / Trauma,50
+HOSP-213,Saurabh Hospital,22.7189904,75.8531524,General / Trauma,50
+HOSP-214,Arogya Ayurvedic Centre,22.7238768,75.8272444,General / Trauma,50
+HOSP-215,Shri Nath Ayurveda Bhawan,22.715359,75.8488019,General / Trauma,50
+HOSP-216,Homoeopathic Hospital,22.72208,75.8371532,General / Trauma,50
+HOSP-217,MTH Women's Hospital,22.7181017,75.8653593,General / Trauma,50
+HOSP-218,Pulse Hospital,22.698822,75.8546304,General / Trauma,50
+HOSP-219,Medisquare Hospital,22.6905038,75.8645895,General / Trauma,50
+HOSP-220,Gurjar Hospital,22.6918563,75.8661372,General / Trauma,50
+HOSP-221,Apple Hospital,22.6940017,75.8666388,General / Trauma,50
+HOSP-222,Samragyee Homoeopathy Clinic,22.7000073,75.8366905,General / Trauma,50
+HOSP-223,Mishra Homeo Clinic,22.7025634,75.842303,General / Trauma,50
+HOSP-224,Dr KK Sharma Clinic,22.6965331,75.8309787,General / Trauma,50
+HOSP-225,Shree Astha Hospital,22.7037115,75.825617,General / Trauma,50
+HOSP-226,Banthia Hospital,22.7232579,75.829552,General / Trauma,50
+HOSP-227,Unique Hospital,22.6952451,75.8386472,General / Trauma,50
+HOSP-228,R-Ayurveda,22.6951152,75.8359046,General / Trauma,50
+HOSP-229,Samadhan Medical Investigation,22.6952841,75.8361151,General / Trauma,50
+HOSP-230,Mishra Homeo Pharmacy & Clinic,22.6964787,75.8343435,General / Trauma,50
+HOSP-231,Dhootapapeshwar,22.6955483,75.8311477,General / Trauma,50
+HOSP-232,Yash Lok Hospital,22.6893074,75.8284642,General / Trauma,50
+HOSP-233,Arihant Hospital,22.7014827,75.8293902,General / Trauma,50
+HOSP-234,Ayurveda Pancharam Center,22.7003686,75.8544373,General / Trauma,50
+HOSP-235,Ayurvedic Panchkarm Yoga-Homeopathy Centre,22.6963451,75.8390509,General / Trauma,50
+HOSP-236,Priyal Eye Care Centre,22.696243,75.839015,General / Trauma,50
+HOSP-237,Sundaram Hospital,22.6962572,75.8380262,General / Trauma,50
+HOSP-238,Dr Nimit Mandhanya clinic,22.6985523,75.8377955,General / Trauma,50
+HOSP-239,Arogyadham Clinic,22.697664,75.8389395,General / Trauma,50
+HOSP-240,Bafna Hospital and Orthopaedic Research Centre,22.7157364,75.8419704,General / Trauma,50
+HOSP-241,Sushrut Hospital,22.7156393,75.845342,General / Trauma,50
+HOSP-242,Maa Holistic Cure,22.6994679,75.8683868,General / Trauma,50
+HOSP-243,Dubey Homeo Clinic,22.6984435,75.867037,General / Trauma,50
+HOSP-244,Dr. Amit Hardia,22.6977283,75.8660902,General / Trauma,50
+HOSP-245,Jigyasa Physiotherapy Clinic,22.698055,75.8688804,General / Trauma,50
+HOSP-246,Pranic Healing Center,22.6970379,75.865995,General / Trauma,50
+HOSP-247,Roberts Nursing Home,22.7107088,75.8883727,General / Trauma,50
+HOSP-248,Varma Union Hospital,22.7119113,75.8381469,General / Trauma,50
+HOSP-249,Indore Eye Hospital,22.7110689,75.8405059,General / Trauma,50
+HOSP-250,Shree Indore Cloth market Hospital,22.7117765,75.8400097,General / Trauma,50
+HOSP-251,Shreepad Hospital and Surgical Centre,22.7065613,75.84189,General / Trauma,50
+HOSP-252,Amratham Clinic,22.6994858,75.8359683,General / Trauma,50
+HOSP-253,Al Shifa National Hospital and Research Centre,22.730917,75.8505642,General / Trauma,50
+HOSP-254,Raja Hospital,22.7087591,75.8282053,General / Trauma,50
+HOSP-255,Sevalay Hospital,22.7136358,75.849211,General / Trauma,50
+HOSP-256,Premkumari Devi Hospital,22.7125311,75.8465958,General / Trauma,50
+HOSP-257,Patanjali Hospital,22.7009618,75.8415996,General / Trauma,50
+HOSP-258,Government Ashtang Ayruvedic College & Hospital,22.6944088,75.848826,General / Trauma,50
+HOSP-259,Kailash Hospital,22.7088283,75.8464429,General / Trauma,50
+HOSP-260,Mata Gujri Charitable Hospital,22.692937,75.8316386,General / Trauma,50
+HOSP-261,Homeo smile clinic,22.6915742,75.8332251,General / Trauma,50
+HOSP-262,Kripalaya,22.6958403,75.8272586,General / Trauma,50
+HOSP-263,Mahaveer Hospital,22.6950806,75.8273846,General / Trauma,50
+HOSP-264,Sanjivani Ayurvedic Clinic,22.6903208,75.8373812,General / Trauma,50
+HOSP-265,Khandelwal Hospitals and Nursing Home,22.6916509,75.8372326,General / Trauma,50
+HOSP-266,Dr. Sunil Madariya,22.6918185,75.8382153,General / Trauma,50
+HOSP-267,Sehat Hospital,22.7021081,75.8393687,General / Trauma,50
+HOSP-268,Balaji Homeo Clinic,22.7005826,75.8345601,General / Trauma,50
+HOSP-269,Indore Hospital,22.7191705,75.8548128,General / Trauma,50
+HOSP-270,Al-noor Charitable Hospital,22.7154364,75.8490246,General / Trauma,50
+HOSP-271,Railway Hospital,22.716859,75.8699106,General / Trauma,50
+HOSP-272,Dakorji ayurveda agency,22.7153536,75.8495316,General / Trauma,50
+HOSP-273,Rajyog Meditation Kendra,22.6800742,75.8512187,General / Trauma,50
+HOSP-274,Pooja Hospital,22.6886863,75.8368045,General / Trauma,50
+HOSP-275,Patanjali Yoga,22.6865444,75.8355385,General / Trauma,50
+HOSP-276,Matram Hospital,22.7025238,75.8687711,General / Trauma,50
+HOSP-277,Vedant Hospital,22.7023982,75.8620072,General / Trauma,50
+HOSP-278,Dr.Shikha Homeopathy Clinic,22.6771385,75.8384031,General / Trauma,50
+HOSP-279,Dr. Trilokinath Pandey,22.67606,75.8371666,General / Trauma,50
+HOSP-280,Aryan Hospital and Research Centre,22.6861497,75.8292845,General / Trauma,50
+HOSP-281,Nityam Yoga Classes,22.6801868,75.8516103,General / Trauma,50
+HOSP-282,Purvi Hospital,22.6841261,75.8296806,General / Trauma,50
+HOSP-283,Rajyog Medications,22.6799971,75.8511561,General / Trauma,50
+HOSP-284,Dukh Bhanjan Hospital,22.6854259,75.8241941,General / Trauma,50
+HOSP-285,Avdhut Homeopathy Clinic,22.6717983,75.8292836,General / Trauma,50
+HOSP-286,Aastha Hospital,22.7695488,75.888759,General / Trauma,50
+HOSP-287,Dr Jay Jain,22.7630588,75.92358,General / Trauma,50
+HOSP-288,Atharva Yog Meditation And Aayurvedic Clinic,22.7623069,75.9267738,General / Trauma,50
+HOSP-289,Katyayani's Homeopathy Clinic,22.7630706,75.9234325,General / Trauma,50
+HOSP-290,Sanjeevani Homeo Clinic,22.7621579,75.9260007,General / Trauma,50
+HOSP-291,Homeo Clinic And Research Centre,22.7618393,75.9273772,General / Trauma,50
+HOSP-292,New Life Hospital,22.6919173,75.9079668,General / Trauma,50
+HOSP-293,Sai Care Hospital,22.6925775,75.9056929,General / Trauma,50
+HOSP-294,St.Francis Hospital And Research Centre,22.6723279,75.9150392,General / Trauma,50
+HOSP-295,Gaurav Hospital,22.6726801,75.8802516,General / Trauma,50
+HOSP-296,Sai Janki Hospital,22.7706615,75.9048629,General / Trauma,50
+HOSP-297,Dr Somendra Mishra,22.6739514,75.8313113,General / Trauma,50
+HOSP-298,Patanjali Medical And Store,22.6735703,75.8321911,General / Trauma,50
+HOSP-299,Ayurveda Speciality Centre,22.6715285,75.8290905,General / Trauma,50
+HOSP-300,Norway Ayurvedic Clinic,22.8194582,75.9284878,General / Trauma,50
+HOSP-301,Sanjivani Homeo Clinic,22.8191,75.9273931,General / Trauma,50
+HOSP-302,Sunrise Hospital,22.7930202,75.9070435,General / Trauma,50
+HOSP-303,सनमती अस्पताल,22.7382494,75.8344173,General / Trauma,50
+HOSP-304,New Life Hospital,22.7594211,75.8481826,General / Trauma,50
+HOSP-305,Shree Maruti Nandan Hospital,22.7407083,75.7918265,General / Trauma,50
+HOSP-306,Mohak Hitech Speciality Hospital,22.7987379,75.8453831,General / Trauma,50
+HOSP-307,SAIMS Hospital,22.7975545,75.8452694,General / Trauma,50
+HOSP-308,SAIMS Dental Hospital,22.7965377,75.8454561,General / Trauma,50
+HOSP-309,Unnamed Hospital Facility,22.798237,75.8455644,General / Trauma,50
+HOSP-310,Unnamed Hospital Facility,22.7594221,75.8481826,General / Trauma,50
+HOSP-311,Dr Anamika Maurya Homoeopathic clinic,22.6687961,75.8248431,General / Trauma,50
+HOSP-312,S.K. Hospital,22.7293188,75.8186889,General / Trauma,50
+HOSP-313,Bhaiji Hospital,22.723959,75.8243497,General / Trauma,50
+HOSP-314,Shrinath Hospital,22.7257366,75.82165,General / Trauma,50
+HOSP-315,Citizen Hospital,22.7262313,75.8188498,General / Trauma,50
+HOSP-316,Sanyog Hospital,22.7267559,75.816645,General / Trauma,50
+HOSP-317,Ramkrishna Hospital,22.7301056,75.8102613,General / Trauma,50
+HOSP-318,Arya aushadhyala,22.7386724,75.7916388,General / Trauma,50
+HOSP-319,Divine Nursing Home,22.7401591,75.7887715,General / Trauma,50
+HOSP-320,Yash Hospital,22.6871856,75.887389,General / Trauma,50
+HOSP-321,Shraddha Hospital,22.7395951,75.848397,General / Trauma,50
+HOSP-322,Dr. Agrawal's Eye Hospital,22.74711,75.8936432,General / Trauma,50
+HOSP-323,Shivam Yoga Therapy Centre,22.6618436,75.890041,General / Trauma,50
+HOSP-324,Classic Homeopathy Clinic,22.6597101,75.8913553,General / Trauma,50
+HOSP-325,Pushpkunj Hospital,22.6525071,75.8847463,General / Trauma,50
+HOSP-326,M.P. Voluntary Health Association,22.6611339,75.883877,General / Trauma,50
+HOSP-327,Unnamed Hospital Facility,22.731813,75.8960718,General / Trauma,50
+HOSP-328,Government Urban Primary Health Center,22.7297122,75.8117151,General / Trauma,50
+HOSP-329,Satguru Nursing Home,22.747177,75.8593785,General / Trauma,50
+HOSP-330,Aman Hospital,22.7243756,75.8642986,General / Trauma,50
+HOSP-331,Harlalka Nursing Home,22.7198683,75.8480845,General / Trauma,50
+HOSP-332,Pushpshri Hospital And Research Center,22.6962261,75.880098,General / Trauma,50
+HOSP-333,Minesh Hopital,22.694495,75.8809226,General / Trauma,50
+HOSP-334,Medipearl Hospital,22.6901264,75.8814088,General / Trauma,50
+HOSP-335,Dashmesh Hospital,22.6843682,75.8641018,General / Trauma,50
+HOSP-336,Akash Hospital,22.7026988,75.9212545,General / Trauma,50
+HOSP-337,Aishwarya Hospital,22.7012433,75.916167,General / Trauma,50
+HOSP-338,M J Memorial Hospital,22.6975038,75.85456,General / Trauma,50
+HOSP-339,Nahar Nursing Home,22.7204139,75.9026229,General / Trauma,50
+HOSP-340,"Mayur Hospital, Indore",22.7248088,75.9061034,General / Trauma,50
+HOSP-341,Mediplus Hospital and Research Centre,22.7594679,75.8788991,General / Trauma,50
+HOSP-342,Nanda Nagar Hospital,22.7481044,75.8781052,General / Trauma,50
+HOSP-343,Pranshu Hospital,22.6980203,75.9059384,General / Trauma,50
+HOSP-344,Aarogya Hospital,22.6968388,75.8810972,General / Trauma,50
+HOSP-345,Apoorva Nursing Home,22.7013052,75.8722378,General / Trauma,50
+HOSP-346,Mission Hospital,22.7112848,75.8717825,General / Trauma,50
+HOSP-347,Aarogya Hospital,22.7134478,75.8544863,General / Trauma,50
+HOSP-348,M J Memorial Hospital,22.6860297,75.8629815,General / Trauma,50
+HOSP-349,Akole Nursing Home,22.7460315,75.8688274,General / Trauma,50
+HOSP-350,Swasthiya Kendra Evam Prastuti Grah,22.7442938,75.8778611,General / Trauma,50
+HOSP-351,Saroj Nursing Home,22.7419092,75.8789796,General / Trauma,50
+HOSP-352,Lady Halima Hospital And Research Center,22.7315645,75.9120298,General / Trauma,50
+HOSP-353,Shaskiya Kalyanmal Nursing Home,22.7265484,75.8897678,General / Trauma,50
+HOSP-354,Angel Hospital,22.7181319,75.906609,General / Trauma,50
+HOSP-355,Jain Nursing Home,22.719197,75.8708472,General / Trauma,50
+HOSP-356,Sahaj Hospital,22.7166172,75.8754538,General / Trauma,50
+HOSP-357,Bhoraskar Hospital,22.7184246,75.875773,General / Trauma,50
+HOSP-358,Global Sng Hospital - Indore,22.7203166,75.8817375,General / Trauma,50
+HOSP-359,Govindram Saxeriya Charitable Trust Hospital,22.7307958,75.8749375,General / Trauma,50
+HOSP-360,Sarvodaya Hospital,22.727242,75.8853042,General / Trauma,50
+HOSP-361,Sunshine Hospital,22.7331571,75.9063959,General / Trauma,50
+HOSP-362,Al- Hayat Prasuti Grah and Surgical Centre,22.7318268,75.9126158,General / Trauma,50
+HOSP-363,Indore Maternity and ENT Centre,22.7327817,75.9143003,General / Trauma,50
+HOSP-364,Dr. Waghmare Nursing Home,22.7164613,75.8551294,General / Trauma,50
+HOSP-365,Eazy Care Hospital,22.7172456,75.8404067,General / Trauma,50
+HOSP-366,Nirmal Care Hospital,22.7246653,75.8254158,General / Trauma,50
+HOSP-367,Prime Care Hospital,22.761931,75.8747256,General / Trauma,50
+HOSP-368,Birla Hospital,22.7554576,75.8626409,General / Trauma,50
+HOSP-369,Kibs Hospital,22.7569383,75.911993,General / Trauma,50
+HOSP-370,अर्पण नर्सिंग होम,22.7202492,75.8554512,General / Trauma,50
+HOSP-371,Deep Nursing Home (P) Ltd,22.7389024,75.8488838,General / Trauma,50
+HOSP-372,Saluja Eye Care Center,22.7660113,75.9004875,General / Trauma,50
+HOSP-373,Asian Institue Of Infertilty Management,22.7353489,75.8880649,General / Trauma,50
+HOSP-374,Index Medical College Hospital and Research Center,22.6832865,76.0509521,General / Trauma,50
+HOSP-375,"Triveni Hospital, Indore",22.7363415,75.885791,General / Trauma,50
+HOSP-376,R L B Hospital and Reserch Center,22.6981069,75.8280069,General / Trauma,50
+HOSP-377,"Vatsalya Nursing Home, Indore",22.7492225,75.8732879,General / Trauma,50
+HOSP-378,The Recovery Hospital,22.7300412,75.8820587,General / Trauma,50
+HOSP-379,Gupta Hand Surgery Centre,22.6909716,75.8806881,General / Trauma,50
+HOSP-380,Dayanand Hospital,22.7419383,75.8711844,General / Trauma,50
+HOSP-381,Matrum Hospital and Maternity Home,22.7025658,75.8686081,General / Trauma,50
+HOSP-382,Vyas Children Hospital,22.7160382,75.8523338,General / Trauma,50
+HOSP-383,Dr.P.S. Hardia Advanced Eye Surgery and Research Institute,22.6265252,75.8063272,General / Trauma,50
+HOSP-384,R.K.Eye And Retina Centre,22.7116503,75.8780193,General / Trauma,50
+HOSP-385,Shri Gurdev Netra Chikitsalaya,22.7022776,75.8723344,General / Trauma,50
+HOSP-386,Pancholi Hospital,22.7008028,75.8409995,General / Trauma,50
+HOSP-387,"Unique Hospital, Jawahar Marg",22.7157791,75.8501874,General / Trauma,50
+HOSP-388,"Vasan Eye Care Hospital, Indore",22.725368,75.8818978,General / Trauma,50
+HOSP-389,Tanish Medical Care,22.7164799,75.8547941,General / Trauma,50
+HOSP-390,Rajas Eye And Retina Research Centre,22.7180817,75.8809376,General / Trauma,50
+HOSP-391,Chl-Cbcc Cancer Center,22.7317604,75.8891881,General / Trauma,50
+HOSP-392,Beams Hospitals,22.7167717,75.8753751,General / Trauma,50
+HOSP-393,Laxmi Memorial Hospital,22.7305681,75.8829913,General / Trauma,50
+HOSP-394,Devi Ahilya Hospital and Research Centre,22.7161224,75.8717966,General / Trauma,50
+HOSP-395,"Noble Hospital, Indore",22.6900127,75.9304874,General / Trauma,50
+HOSP-396,Ent Hospital and Research Centre,22.7205745,75.8819179,General / Trauma,50
+HOSP-397,Dr. Aditya Agarwal Eye Site,22.7178011,75.8778986,General / Trauma,50
+HOSP-398,Shreemati Laxmi Devi Eye Hospital and Research Centre,22.7219179,75.8779979,General / Trauma,50
+HOSP-399,Shukla Hospital and Investigation Centre,22.6942343,75.8812085,General / Trauma,50
+HOSP-400,Sarjubai Parmarthik Netra Chikitsalaya,22.7379859,75.8674622,General / Trauma,50
+HOSP-401,Geetanjali Hospital,22.7217997,75.8348296,General / Trauma,50
+HOSP-402,"Singhal Urology And Gynocology Center,Indore",22.7160507,75.8431479,General / Trauma,50
+HOSP-403,Mahashabde Netralaya and Child Care Center,22.6980871,75.8443268,General / Trauma,50
+HOSP-404,Shri Aurobindo Institute Of Medical Sciences,22.7972182,75.8451918,General / Trauma,50
+HOSP-405,Eureka Hospital Pvt. Ltd.,22.7229917,75.8984531,General / Trauma,50
+HOSP-406,Batra Hospital,22.7218957,75.880888,General / Trauma,50
+HOSP-407,Pyari Bai Memorial Hospital,22.9750162,75.82831,General / Trauma,50
+HOSP-408,"S. K. Hospital, Indore",22.7168683,75.838436,General / Trauma,50
+HOSP-409,Shri Malwa Hospital and Research Center,22.7278382,75.8253226,General / Trauma,50
+HOSP-410,Karuna Maternity and Nursing Home,22.7126217,75.8789645,General / Trauma,50
+HOSP-411,Choithram Netralaya,22.6835599,75.7560512,General / Trauma,50
+HOSP-412,Indore Lasik Laser Centre,22.7260706,75.8824047,General / Trauma,50
+HOSP-413,"Getwell Hospital, Indore",22.5619334,75.7615793,General / Trauma,50
+HOSP-414,Prashanti Hospital,22.5529307,75.7669289,General / Trauma,50
+HOSP-415,Suyog Hospital,22.7043895,75.8607808,General / Trauma,50
+HOSP-416,M.G. Smriti Chikitsalaya Mahavidhyalaya,22.714049,75.8822733,General / Trauma,50
+HOSP-417,Sanwer Cure Well Pvt. Ltd.,22.9754409,75.8281799,General / Trauma,50
+HOSP-418,Red Cross Hospital,22.5589004,75.7612614,General / Trauma,50
+HOSP-419,Government Hospital,22.6199494,75.9425519,General / Trauma,50
+HOSP-420,Government Hospital,22.537453,75.9132515,General / Trauma,50
+HOSP-421,Government hospital Piwaday,22.628637,76.0291015,General / Trauma,50
+HOSP-422,Government hospital Betma,22.6884332,75.6126335,General / Trauma,50
+HOSP-423,"Government Hospital, Shrikhandi",22.5687015,75.745769,General / Trauma,50
+HOSP-424,PHC Gautmpura,22.9900851,75.5206096,General / Trauma,50
+HOSP-425,CH Mhow,22.5499904,75.7643473,General / Trauma,50
+HOSP-426,Shubhdeep Ayurved Medical College and Hospital,22.584501,75.899583,General / Trauma,50
+HOSP-427,ECHS Polyclinic Mhow,22.557168,75.7559,General / Trauma,50
+HOSP-428,Sanjeevani Hospital,22.6289668,75.8064153,General / Trauma,50
+HOSP-429,"Bombay Hospital,Indore",22.6588533,75.8042773,General / Trauma,50
+HOSP-430,Srl Pathology Centre,22.6369986,75.8097168,General / Trauma,50
+HOSP-431,Hukumchand Hospital (Lal Hospital),22.7176578,75.8667444,General / Trauma,50
+HOSP-432,Nakshatra Heart and Multispeciality Hospital,22.707529,75.906239,General / Trauma,50
+HOSP-433,R K Hospital,22.6978522,75.8787458,General / Trauma,50
+HOSP-434,Barod Hospital,22.756213,75.878223,General / Trauma,50
+HOSP-435,Vardhman Jain Swasth Kendra Chitavad,22.6916724,75.8805333,General / Trauma,50
+HOSP-436,Vinayak Netralaya,22.7269554,75.8837297,General / Trauma,50
+HOSP-437,Shri Sai Baba Hospital & Research Centre,22.710007,75.84975,General / Trauma,50
+HOSP-438,Choithram hospital and research center indore,22.703622,75.8557083,General / Trauma,50
+HOSP-439,mother care hospital,22.7580312,75.8854799,General / Trauma,50
+HOSP-440,Motherhood Hospitals,22.743113,75.890916,General / Trauma,50
+HOSP-441,SnS Hospital and Advanced Newborn Care centre,22.7296764,75.8969984,General / Trauma,50
+HOSP-442,Coral Hospital and Research Centre,22.726928,75.884611,General / Trauma,50
+HOSP-443,Gupta Orthopaedic Clinic & Sports Injuiry Centre,22.695929,75.903254,General / Trauma,50
+HOSP-444,True Care Hospital,22.747934,75.846147,General / Trauma,50
+HOSP-445,Chota Hospital Pvt. Ltd.,22.745733,75.8930833,General / Trauma,50
+HOSP-446,ASG Eye Hospital,22.721783,75.8797006,General / Trauma,50
+HOSP-447,H.J.Memorial Hospital,22.708065,75.855639,General / Trauma,50
+HOSP-448,Sankara Eye Centre Indore,22.7590431,75.8890908,General / Trauma,50
+HOSP-449,Nasha Mukti Kendra And Rehabilitation Center,22.6942612,75.9083786,General / Trauma,50
+HOSP-450,Shri Bharat Hospital,22.7551567,75.8671865,General / Trauma,50
+HOSP-451,Arogya Hospital,22.740934,75.837147,General / Trauma,50
+HOSP-452,Dr. Akash Tiwari - Cancer specialist (Medical Oncologist),22.7288625,75.879375,General / Trauma,50
+HOSP-453,Shree Nirmala Hospital,22.813053,75.848227,General / Trauma,50
+HOSP-454,Bhandari hospital,22.745538,75.871324,General / Trauma,50
+HOSP-455,Sangam Hospital,22.7399638,75.8400928,General / Trauma,50
+HOSP-456,Arpit Hospital,22.7122042,75.9062226,General / Trauma,50
+HOSP-457,Vishesh Jupiter Hospital,22.6845473,75.8816383,General / Trauma,50
+HOSP-458,Super Speciality Hospital,22.696983,75.8820931,General / Trauma,50
+HOSP-459,Vinayaka Hospital,22.7299552,75.9036384,General / Trauma,50
+HOSP-460,bombay hospital,22.754573,75.9036966,General / Trauma,50
+HOSP-461,NAMAH HOSPITAL AND LAPAROSCOPIC CENTRE,22.7530113,75.8921148,General / Trauma,50
+HOSP-462,Unnamed Hospital Facility,22.6912589,75.9008636,General / Trauma,50
+HOSP-463,Unnamed Hospital Facility,22.6919903,75.9015468,General / Trauma,50
+HOSP-464,Shree Guru Kripa Hospital,22.7247432,75.8251753,General / Trauma,50
+HOSP-465,Metro Hospital,22.7175126,75.8409474,General / Trauma,50
+HOSP-466,Unnamed Hospital Facility,22.7160122,75.840465,General / Trauma,50
+HOSP-467,Unnamed Hospital Facility,22.727799,75.8877303,General / Trauma,50
+HOSP-468,Bombay Hospital,22.75465039,75.90348728,General / Trauma,50
+HOSP-469,CHL CBCC Cancer Centre,22.73234396,75.88918961,General / Trauma,50
+HOSP-470,Life Line Hospital,22.73323931,75.89046145,General / Trauma,50
+HOSP-471,Unnamed Hospital Facility,22.71458603,75.87963933,General / Trauma,50
+HOSP-472,Choithram Hospital and Research Centre,22.6887819,75.85262398,General / Trauma,50
+HOSP-473,Chacha Nehru Bal Chikitsalay,22.71462737,75.88081329,General / Trauma,50
+HOSP-474,Synergy Hospital And Research Centre,22.75848507,75.88908441,General / Trauma,50
+HOSP-475,Life Care Hospital - Indore,22.76235137,75.88443191,General / Trauma,50
+HOSP-476,Apollo Hospital,22.75761201,75.88517728,General / Trauma,50
+HOSP-477,Bapat Hospital,22.75609561,75.87960954,General / Trauma,50
+HOSP-478,Nahar Hospital,22.75525017,75.87764333,General / Trauma,50
+HOSP-479,Dyavati Hospital,22.73715614,75.90083818,General / Trauma,50
+HOSP-480,Noble Hospital,22.71890654,75.87790313,General / Trauma,50
+HOSP-481,NADL Healthcare,22.725011,75.89445,General / Trauma,50
+HOSP-482,bhandandi hospitals,22.75295114,75.8885486,General / Trauma,50
