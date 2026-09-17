@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Emergency Portal - Login</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-card { background: #1e293b; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-align: center; width: 340px; border: 1px solid #334155; }
+        h2 { margin-bottom: 8px; color: #f8fafc; }
+        p { color: #94a3b8; font-size: 14px; margin-bottom: 24px; }
+        button { width: 100%; padding: 14px; margin: 8px 0; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 15px; transition: transform 0.1s ease; }
+        button:active { transform: scale(0.98); }
+        .btn-driver { background: #0284c7; color: white; }
+        .btn-driver:hover { background: #0369a1; }
+        .btn-hospital { background: #059669; color: white; }
+        .btn-hospital:hover { background: #047857; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h2>Emergency Vehicle Portal</h2>
+        <p>Select Console Access Portal</p>
+        <button class="btn-driver" onclick="window.location.href='/driver'">Ambulance Driver Login</button>
+        <button class="btn-hospital" onclick="window.location.href='/hospital'">Hospital ER Console</button>
+    </div>
+</body>
+</html>

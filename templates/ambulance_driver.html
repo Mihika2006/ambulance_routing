@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver Telematics & Navigation</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #0f172a; color: white; display: flex; height: 100vh; }
+        .sidebar { width: 360px; padding: 20px; background: #1e293b; overflow-y: auto; box-sizing: border-box; border-right: 1px solid #334155; }
+        #map { flex: 1; height: 100vh; }
+        .card { background: #334155; padding: 16px; border-radius: 8px; margin-bottom: 16px; border: 1px solid #475569; }
+        .card h3 { margin-top: 0; font-size: 16px; color: #38bdf8; }
+        .status-box { padding: 12px; border-radius: 6px; font-weight: bold; text-align: center; font-size: 14px; margin-top: 10px; }
+        .green { background: #16a34a; color: white; }
+        .red { background: #dc2626; color: white; animation: pulse 1s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Ambulance Console</h2>
+        <div class="card">
+            <p>Vehicle ID: <b id="amb_id" style="color: #f1f5f9;">--</b></p>
+            <p>Type: <b id="amb_type" style="color: #f1f5f9;">--</b></p>
+        </div>
+        <div class="card">
+            <h3>Patient Vitals & Triage</h3>
+            <p>SpO2: <b id="spo2">--</b>% | Heart Rate: <b id="hr">--</b> bpm</p>
+            <p>NEWS2 Score: <b id="news2">--</b> / 12</p>
+            <div id="status_box" class="status-box green">CONNECTING...</div>
+        </div>
+        <div class="card">
+            <h3>Navigation Target</h3>
+            <p>Facility: <b id="hosp_name">--</b></p>
+            <p>Distance: <b id="dist">--</b> km</p>
+            <p>A* Estimated Time: <b id="eta">--</b> mins</p>
+        </div>
+    </div>
+    <div id="map"></div>
+
+    <script>
+        const map = L.map('map').setView([22.7196, 75.8577], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        let driverMarker = L.marker([22.7196, 75.8577]).addTo(map).bindPopup("Ambulance Location");
+        let hospMarker = L.marker([22.7151, 75.8704]).addTo(map).bindPopup("Target Hospital");
+        let routeLine = null;
+        let lastStatus = "";
+
+        function playAlertSound() {
+            try {
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(880, ctx.currentTime);
+                osc.connect(ctx.destination);
+                osc.start();
+                osc.stop(ctx.currentTime + 0.6);
+            } catch(e) { console.log(e); }
+        }
+
+        const ws = new WebSocket("ws://" + window.location.host + "/ws/vitals");
+        ws.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            
+            document.getElementById("amb_id").innerText = data.ambulance_id;
+            document.getElementById("amb_type").innerText = data.ambulance_type;
+            document.getElementById("spo2").innerText = data.spo2;
+            document.getElementById("hr").innerText = data.heart_rate;
+            document.getElementById("news2").innerText = data.news2_score;
+            document.getElementById("hosp_name").innerText = data.assigned_hospital;
+            document.getElementById("dist").innerText = data.distance_km;
+            document.getElementById("eta").innerText = data.eta;
+
+            const statusBox = document.getElementById("status_box");
+            statusBox.innerText = data.alert_status;
+            
+            if (data.alert_status.includes("RED")) {
+                statusBox.className = "status-box red";
+                if (lastStatus !== data.alert_status) {
+                    playAlertSound();
+                }
+            } else {
+                statusBox.className = "status-box green";
+            }
+            lastStatus = data.alert_status;
+
+            const ambCoords = [data.current_lat, data.current_lon];
+            const hospCoords = [data.hosp_lat, data.hosp_lon];
+            
+            driverMarker.setLatLng(ambCoords);
+            hospMarker.setLatLng(hospCoords).bindPopup(data.assigned_hospital);
+
+            if (routeLine) map.removeLayer(routeLine);
+            routeLine = L.polyline([ambCoords, hospCoords], {
+                color: data.alert_status.includes("RED") ? '#ef4444' : '#3b82f6', 
+                weight: 5
+            }).addTo(map);
+            map.panTo(ambCoords);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital ER Monitoring Console</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 30px; background: #f8fafc; color: #0f172a; }
+        h1 { color: #1e293b; margin-bottom: 20px; }
+        .grid { display: flex; gap: 20px; }
+        .card { background: white; padding: 24px; border-radius: 10px; flex: 1; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+        .card h2 { margin-top: 0; font-size: 18px; color: #0f172a; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+        .board { background: #f1f5f9; padding: 15px; border-radius: 8px; height: 300px; overflow-y: auto; border: 1px solid #cbd5e1; }
+        .alert-item { background: #fee2e2; border-left: 5px solid #ef4444; padding: 12px; margin-bottom: 10px; border-radius: 4px; color: #991b1b; font-size: 14px; }
+        .normal-item { background: #dcfce7; border-left: 5px solid #22c55e; padding: 12px; margin-bottom: 10px; border-radius: 4px; color: #166534; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h1>Hospital Emergency Department Monitoring Console</h1>
+    <div class="grid">
+        <div class="card">
+            <h2>Incoming Unit Status</h2>
+            <p>Ambulance ID: <b id="amb_id">--</b></p>
+            <p>Vehicle Type: <b id="amb_type">--</b></p>
+            <p>Coordinates: <b id="coords">--</b></p>
+            <p>SpO2 Level: <b id="spo2">--</b>% | Heart Rate: <b id="hr">--</b> bpm</p>
+            <p>NEWS2 Triage Score: <b id="news2">--</b> / 12</p>
+        </div>
+        <div class="card">
+            <h2>Live Notification & Reroute Board</h2>
+            <div id="notification_board" class="board">
+                <div class="normal-item">System operational. Awaiting stream...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ws = new WebSocket("ws://" + window.location.host + "/ws/vitals");
+        const board = document.getElementById("notification_board");
+        let lastAlert = "";
+
+        ws.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            
+            document.getElementById("amb_id").innerText = data.ambulance_id;
+            document.getElementById("amb_type").innerText = data.ambulance_type;
+            document.getElementById("coords").innerText = `${data.current_lat.toFixed(4)}, ${data.current_lon.toFixed(4)}`;
+            document.getElementById("spo2").innerText = data.spo2;
+            document.getElementById("hr").innerText = data.heart_rate;
+            document.getElementById("news2").innerText = data.news2_score;
+
+            if (data.alert_status !== lastAlert) {
+                const item = document.createElement("div");
+                const timestamp = new Date().toLocaleTimeString();
+                if (data.alert_status.includes("RED")) {
+                    item.className = "alert-item";
+                    item.innerHTML = `<b>[${timestamp}] CRITICAL ALERT:</b> ${data.ambulance_id} condition degraded to NEWS2 ${data.news2_score}. Dynamic reroute initiated toward ${data.assigned_hospital}.`;
+                } else {
+                    item.className = "normal-item";
+                    item.innerHTML = `<b>[${timestamp}] STABLE:</b> ${data.ambulance_id} en route to ${data.assigned_hospital}. ETA: ${data.eta} mins.`;
+                }
+                board.prepend(item);
+                lastAlert = data.alert_status;
+            }
+        };
+    </script>
+</body>
+</html>
