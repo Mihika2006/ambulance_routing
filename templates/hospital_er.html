@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hospital ER Monitoring Console</title>
+<style>
+  :root{--bg:#0b0f19;--glass:rgba(17,24,39,.85);--cyan:#22d3ee;--amber:#f59e0b;--red:#ef4444;--yellow:#facc15;--green:#34d399;--muted:#7b8aa3;--text:#d6e2f3;
+        --mono:ui-monospace,"Cascadia Mono","SF Mono",Consolas,Menlo,monospace}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:var(--mono);padding:12px}
+  .hud{background:var(--glass);border:1px solid rgba(34,211,238,.28);border-radius:6px;padding:14px 16px;box-shadow:0 0 22px rgba(34,211,238,.08)}
+  .hud.amber{border-color:rgba(245,158,11,.35)}
+  h1,h2{margin:0;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+  h1{font-size:13px;color:var(--cyan)} h2{font-size:11px;color:var(--cyan);margin-bottom:10px}
+  .amber h2{color:var(--amber)}
+  #top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+  #top .sp{flex:1} .sub{font-size:10px;color:var(--muted);letter-spacing:.12em}
+  select{background:#060a12;color:var(--text);border:1px solid rgba(34,211,238,.35);border-radius:4px;padding:6px 8px;font:12px var(--mono);max-width:280px}
+  .badge{font-size:10px;padding:3px 8px;border:1px solid;border-radius:3px;letter-spacing:.1em;text-transform:uppercase}
+  .on{color:var(--green);border-color:rgba(52,211,153,.5)} .off{color:var(--red);border-color:rgba(239,68,68,.6)}
+  #inc{margin-bottom:12px;padding:12px 16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:6px;border:1px solid var(--muted);color:var(--muted);text-align:center}
+  #inc.go{color:#052e1b;background:var(--green);border-color:var(--green);animation:bl 1s infinite}
+  #inc.div{color:#1a1000;background:var(--amber);border-color:var(--amber)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+  .row{display:flex;justify-content:space-between;gap:10px;font-size:12px;padding:5px 0;border-bottom:1px dashed rgba(123,138,163,.18)}
+  .k{color:var(--muted);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .v{text-align:right;word-break:break-word}
+  .bar{height:6px;background:rgba(123,138,163,.2);border-radius:3px;margin-top:10px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--cyan);box-shadow:0 0 8px var(--cyan);transition:width .4s linear}
+  .big{font-size:26px;font-weight:700} .good{color:var(--green)} .warn{color:var(--amber)} .bad{color:var(--red)}
+  table{width:100%;border-collapse:collapse;font-size:11.5px} th{color:var(--muted);font-size:10px;text-align:left;letter-spacing:.08em;padding:4px 6px}
+  td{padding:5px 6px;border-top:1px dashed rgba(123,138,163,.18)} td.n{text-align:right}
+  tr.sel td{background:var(--yellow);color:#1a1000;font-weight:700} tr.old td{color:var(--muted);text-decoration:line-through}
+  #board{height:260px;overflow-y:auto}
+  .ev{border-left:4px solid var(--muted);padding:7px 10px;margin-bottom:7px;border-radius:3px;font-size:12px;background:rgba(123,138,163,.08)}
+  .ev.ok{border-color:var(--green)} .ev.info{border-color:var(--cyan)} .ev.warn{border-color:var(--amber);background:rgba(245,158,11,.1)}
+  .ev.alert{border-color:var(--red);background:rgba(239,68,68,.12);color:#fecaca} .ev b{color:var(--muted);font-weight:400}
+  @keyframes bl{50%{opacity:.55}}
+</style>
+</head>
+<body>
+<div class="hud" id="top">
+  <div><h1>Hospital ER Monitoring Console</h1><div class="sub">INCOMING EMERGENCY FEED // LIVE FROM DRIVER CONSOLE</div></div>
+  <div class="sp"></div>
+  <label class="sub" for="mine">MY HOSPITAL</label><select id="mine"><option value="">All facilities (monitor only)</option></select>
+  <span class="badge off" id="conn">Link: connecting</span>
+</div>
+<div id="inc">No active emergency</div>
+<div class="grid">
+  <div class="hud"><h2>Incoming Unit</h2>
+    <div class="row"><span class="k">Ambulance ID</span><span class="v" id="amb_id">--</span></div>
+    <div class="row"><span class="k">Vehicle type</span><span class="v" id="amb_type">--</span></div>
+    <div class="row"><span class="k">Patient</span><span class="v" id="patient">--</span></div>
+    <div class="row"><span class="k">Emergency</span><span class="v" id="cat">--</span></div>
+    <div class="row"><span class="k">Status</span><span class="v" id="status">STANDBY</span></div>
+    <div class="row"><span class="k">Destination</span><span class="v" id="dest">--</span></div>
+    <div class="row"><span class="k">ETA</span><span class="v" id="eta">--</span></div>
+    <div class="row"><span class="k">Speed</span><span class="v" id="speed">--</span></div>
+    <div class="row"><span class="k">Coordinates</span><span class="v" id="coords">--</span></div>
+    <div class="bar"><i id="fill"></i></div>
+  </div>
+  <div class="hud"><h2>Patient Vitals (NEWS2)</h2>
+    <div class="row"><span class="k">SpO2</span><span class="v big" id="spo2">--</span></div>
+    <div class="row"><span class="k">Heart rate</span><span class="v big" id="hr">--</span></div>
+    <div class="row"><span class="k">Systolic BP / RR</span><span class="v" id="bprr">--</span></div>
+    <div class="row"><span class="k">NEWS2 score</span><span class="v big" id="news2">--</span></div>
+    <div class="row"><span class="k">Triage flag</span><span class="v" id="flag">--</span></div>
+  </div>
+  <div class="hud"><h2>Facility Matrix</h2>
+    <table><thead><tr><th>#</th><th>Hospital</th><th>ETA</th><th>Beds</th><th>Score</th></tr></thead><tbody id="cands"><tr><td colspan="5" class="k">Awaiting dispatch...</td></tr></tbody></table>
+    <div class="sub" style="margin-top:8px">score = 0.6 x ETA + 0.4 x (1 / beds). Lower is better. Highlighted = selected.</div>
+  </div>
+  <div class="hud amber"><h2>Notification &amp; Reroute Board</h2><div id="board"><div class="ev info">System operational. Awaiting stream...</div></div></div>
+</div>
+<script>
+(function(){
+  "use strict";
+  var $ = function(i){ return document.getElementById(i); };
+  var S = {}, retry = 1000;
+  function set(id, txt, cls){ var e = $(id); e.textContent = txt; if(cls !== undefined){ e.className = (e.className.split(" ").filter(function(c){ return ["big","v"].indexOf(c) > -1; }).join(" ") + " " + cls).trim(); } }
+  function num(x, d){ return (x === null || x === undefined) ? "--" : Number(x).toFixed(d); }
+
+  fetch("/api/hospitals").then(function(r){ return r.json(); }).then(function(d){
+    var sel = $("mine"), saved = localStorage.getItem("myHospital") || "";
+    d.hospitals.slice().sort(function(a,b){ return a.name.localeCompare(b.name); }).forEach(function(h){
+      var o = document.createElement("option"); o.value = h.id; o.textContent = h.name; sel.appendChild(o);
+    });
+    sel.value = saved; render();
+  }).catch(function(){});
+  $("mine").onchange = function(){ localStorage.setItem("myHospital", this.value); render(); };
+
+  function render(){
+    var s = S, v = s.vitals || {}, tg = s.target, mine = $("mine").value, inc = $("inc");
+    set("amb_id", s.ambulance_id || "--"); set("amb_type", s.ambulance_type || "--");
+    set("patient", s.patient || "--"); set("cat", s.category || "--");
+    set("status", s.status || "STANDBY", s.status === "OBSTRUCTION" ? "bad" : s.status === "REROUTED" ? "warn" : s.status ? "good" : "");
+    set("dest", tg ? tg.name : "--"); set("eta", s.eta_min != null ? num(s.eta_min, 1) + " min" : "--");
+    set("speed", s.speed_kph != null ? Math.round(s.speed_kph) + " km/h" : "--");
+    set("coords", s.lat != null ? num(s.lat, 4) + ", " + num(s.lon, 4) : "--");
+    $("fill").style.width = Math.min(s.progress || 0, 100) + "%";
+    set("spo2", v.spo2 != null ? v.spo2 + " %" : "--", v.spo2 < 92 ? "bad" : v.spo2 < 95 ? "warn" : "");
+    set("hr", v.heart_rate != null ? v.heart_rate + " bpm" : "--", v.heart_rate > 130 ? "bad" : v.heart_rate > 110 ? "warn" : "");
+    set("bprr", v.systolic_bp != null ? v.systolic_bp + " mmHg / " + v.resp_rate + " rpm" : "--");
+    set("news2", v.news2 != null ? v.news2 + " / 12" : "--", v.news2 >= 5 ? "bad" : v.news2 >= 3 ? "warn" : "good");
+    set("flag", v.alert_status || "--", (v.alert_status || "").indexOf("RED") > -1 ? "bad" : "good");
+
+    inc.className = ""; inc.textContent = "No active emergency";
+    if(mine && tg){
+      if(s.active && tg.id === mine){ inc.className = "go"; inc.textContent = "INCOMING: " + s.category + " patient. Prepare team. ETA " + num(s.eta_min, 1) + " min"; }
+      else if(s.previous_target && s.previous_target.id === mine){ inc.className = "div"; inc.textContent = "PATIENT DIVERTED to " + tg.name + ". Stand down."; }
+      else if(s.status === "ARRIVED" && tg.id === mine){ inc.className = "go"; inc.textContent = "PATIENT ARRIVED. Handover in progress."; }
+    } else if(s.active && tg){ inc.textContent = "Active: " + s.ambulance_id + " heading to " + tg.name; }
+
+    var body = $("cands"); body.textContent = "";
+    var rows = s.candidates || [];
+    if(!rows.length){ body.innerHTML = '<tr><td colspan="5" class="k">Awaiting dispatch...</td></tr>'; }
+    rows.forEach(function(r, i){
+      var tr = document.createElement("tr");
+      if(r.id === s.selected_id){ tr.className = "sel"; }
+      else if(s.previous_target && r.id === s.previous_target.id){ tr.className = "old"; }
+      [[(r.id === s.selected_id ? "\u2605" : (r.rank || i + 1)), ""], [r.name, ""], [num(r.eta_min, 1) + "m", "n"], [r.beds_available, "n"], [num(r.score, 2), "n"]].forEach(function(c){
+        var td = document.createElement("td"); td.textContent = c[0]; td.className = c[1]; tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+
+    var b = $("board"); b.textContent = "";
+    (s.events || []).slice().reverse().forEach(function(e){
+      var d = document.createElement("div"); d.className = "ev " + e.level;
+      var t = document.createElement("b"); t.textContent = "[" + e.t + "] ";
+      d.appendChild(t); d.appendChild(document.createTextNode(e.text)); b.appendChild(d);
+    });
+    if(!(s.events || []).length){ b.innerHTML = '<div class="ev info">System operational. Awaiting stream...</div>'; }
+  }
+
+  function connect(){
+    var ws = new WebSocket((location.protocol === "https:" ? "wss://" : "ws://") + location.host + "/ws/hospital");
+    ws.onopen = function(){ retry = 1000; $("conn").textContent = "Link: live"; $("conn").className = "badge on"; };
+    ws.onmessage = function(ev){ var m; try{ m = JSON.parse(ev.data); }catch(e){ return; } if(m.type === "snapshot"){ S = m.state || {}; render(); } };
+    ws.onclose = function(){ $("conn").textContent = "Link: reconnecting"; $("conn").className = "badge off"; setTimeout(connect, retry); retry = Math.min(retry * 2, 8000); };
+  }
+  render(); connect();
+})();
+</script>
+</body>
+</html>
